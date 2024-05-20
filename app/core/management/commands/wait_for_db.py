@@ -10,7 +10,7 @@ class Command(BaseCommand):
         db_up = False
         while db_up is False:
             try:
-                self.check(database=['default'])
+                self.check(databases=['default'])
                 db_up= True
             except(Psycopg20pError,OperationalError):
                 self.stdout.write("delay for a second")
